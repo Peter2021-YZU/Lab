@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1603563816 source:d:\cpp projects\essay\main.cpp
+	<iostream>
+	<string>
+	<ctype.h>
+
+1603563998 source:d:\cpp projects\s1093539_lab6\main.cpp
+	<iostream>
+	<string>
+	<ctype.h>
+

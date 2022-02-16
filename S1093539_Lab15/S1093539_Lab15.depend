@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1610956914 source:d:\cpp projects\s1093539_lab15\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<algorithm>
+	<string.h>
+
