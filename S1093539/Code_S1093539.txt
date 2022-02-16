@@ -1,0 +1,42 @@
+//Name: VALCOURT JOHN PETERSON
+//Student ID: S1093539
+//
+LOAD R1 254	//Load number of cases from the keyboard and place it in R1
+ADD R2 R0 R0 	//Counter for number greater than 80 placed in R2
+ADD R3 R0 R0 	//Counter for number greater than 60 placed in R3
+ADD R4 R0 R0 	// Counter less than 60 placed in R4
+ADD R10 R0 R0 	//Initialize R10 for 100
+ADDI R10 100	//Register for 100 
+SUB R11 R1 R10	//Verify if number of cases is greater than 100
+JUMPGT R11 14	//If it is greater than 100, halt ! if not, continue
+LOAD R5 254 	//Take number from the keyboard
+ADD R6 R0 R0 	//Initialize R6 for 80
+ADDI R6 80	//Register for 80
+ADD R8 R0 R0	//Initialize R8 for 60
+ADDI R8 60	//Register for 60
+SUB R7 R6 R5	//Verify if number is greater than 80
+JUMPGT R7 8	//If number is less than 80 go to compare the number with 60, else continue
+ADDI R2 1	//Increment the register for numbers greater than 80
+ADDI R1 -1	//Decrement the number of cases by 1
+JUMPNE R1 -9	//If the number of input is greater than 0, take a new number from the keyboard, else continue
+STORE 255 R2	//Print the number of numbers greater than 80
+STORE 255 R3	//Print the number of numbers greater than 60
+STORE 255 R4	//Print the number of numbers less than 60
+HALT		//Terminate the program execution
+SUB R9 R8 R5	//Verify if number is greater than 60
+JUMPGT R9 8	//If number is less than 60, go to increment the counter for number less than 60 by 1, else continue
+ADDI R3 1	//Increment the the counter for number greater than 60 by 1
+ADDI R1 -1	//Decrement the number of cases by 1 
+JUMPNE R1 -18	//If the number of input is still greater than 0, go to take a new number from keyboard
+STORE 255 R2	//Print the number of numbers greater than 80
+STORE 255 R3	//Print the number of numbers greater than 60
+STORE 255 R4	//Print the number of numbers less than 60
+HALT		//Terminate the program execution
+ADDI R4 1	//Increment the counter for number less than 60 by one
+ADDI R1 -1	//Decrement the number of cases by 1
+JUMPNE R1 -25	//If the number of input is still greater than 0, go to take a new number from keyboard
+STORE 255 R2	//Write the number of numbers greater than 80 on the screen
+STORE 255 R3	//Write the number of numbers greater than 60 on the screen
+STORE 255 R4	//Write the number of numbers less than 60 on the screen
+HALT		//Terminate the program execution
+END

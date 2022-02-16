@@ -1,0 +1,16 @@
+// This program adds K integers read from the keyboard. 
+
+LOAD R1 254   // Input the number K from keyboard into R1. K is the number of integers to be added.
+ADD R2 R0 R0  // Initialize R2 to 0. R2 will be used to store the sum of K integers
+JUMPNE R1 3   // Check whether R1, i.e., K is reduced to zero. If it is reduced to zero, the program
+                    // continues executing Inst #4. If not, go to Inst #6. 
+STORE 255 R2  // Output the sum of K integers. 
+HALT		  // Stop the program execution
+LOAD R3 254	  // Input an integer and store it into R3
+ADD R2 R2 R3 	// Do R2=R2+R3. That is, add R3 to the sum.
+ADDI R1 -1  		// Decrease R1 by 1. The number of integers yet to be processed is reduced by 1.
+JUMPNE R1 -3     // If R1 is not reduced to zero, go to Inst #6. That is PC+n = 9 + (-3)=6.
+                      // Otherwise, continue executing Inst #10.
+STORE 255 R2     // Output the sum.
+HALT             // Stop program execution
+END  

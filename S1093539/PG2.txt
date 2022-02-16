@@ -1,0 +1,15 @@
+// This program reads two numbers. Print out the one which is larger. If the larger one is 0, the program terminates. 
+// Otherwise, repeat reading two numbers.
+
+START: 					// Define an address label that associate with LOAD R1 254. 
+	LOAD R1 254   		// Read the first number from keyboard and place it in R1
+	LOAD R2 254 		 	// Read the second number
+	SUB	 R3 R2 R1		//R3 = R2 ¡V R1
+	JUMPGT R3 STOP  		// If R1 < R2,  jump to STOP and print out R2
+	STORE 255 R1			// Because R1>=R2, print out R1
+	JUMPNE R1 START    	// Check R1=0? If not equal, jump to START
+	HALT    			// Because R1=0 and R1 >=R2, program terminates
+STOP: STORE 255 R2 		// print out R2 because R2 > R1
+	JUMPNE R2 START   	// Check R2=0? if not equal, jump to START
+	HALT			// Because R2=0 and R2>R1, program terminates 
+	END
