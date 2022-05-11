@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1616568027 source:d:\cpp projects\lab4\main.cpp
+	<iostream>
+	"Lab4.h"
+
+1616568027 d:\cpp projects\lab4\lab4.h
+
+1616567222 source:d:\cpp projects\lab4\lab4.cpp
+	<iostream>
+	"Lab4.h"
+
